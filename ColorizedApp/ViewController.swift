@@ -25,14 +25,17 @@ class ViewController: UIViewController {
 
     @IBAction func redSliderChangeValue() {
         redSliderValueLabel.text = String(format: "%.2f", redSlider.value)
+        resultColorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value),alpha: 1)
     }
     
     @IBAction func greenSliderChangeValue() {
         greenSliderValueLabel.text = String(format: "%.2f", greenSlider.value)
+        resultColorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value),alpha: 1)
     }
     
     @IBAction func blueSliderChangeValue() {
         blueSliderValueLabel.text = String(format: "%.2f", blueSlider.value)
+        resultColorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value),alpha: 1)
     }
 }
 
