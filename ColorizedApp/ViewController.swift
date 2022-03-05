@@ -21,21 +21,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         resultColorView.layer.cornerRadius = 10
+        redSlider.minimumTrackTintColor = UIColor.red
+        greenSlider.minimumTrackTintColor = UIColor.green
     }
-
-    @IBAction func redSliderChangeValue() {
+    
+    @IBAction func colorSlidersChangeValue() {
+        changeColorAndLabel()
+    }
+    
+    private func changeColorAndLabel() {
         redSliderValueLabel.text = String(format: "%.2f", redSlider.value)
-        resultColorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value),alpha: 1)
-    }
-    
-    @IBAction func greenSliderChangeValue() {
         greenSliderValueLabel.text = String(format: "%.2f", greenSlider.value)
-        resultColorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value),alpha: 1)
-    }
-    
-    @IBAction func blueSliderChangeValue() {
         blueSliderValueLabel.text = String(format: "%.2f", blueSlider.value)
         resultColorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value),alpha: 1)
     }
 }
-
